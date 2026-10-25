@@ -1,8 +1,9 @@
 import { useRef } from "react";
 
 import useTasks from "./hooks/useTasks";
-import paperTasks from "./assets/paper-tasks.png";
-import paperNothing from "./assets/paper-nothing.png";
+import paperTasks from "./assets/paper-tasks.jpg";
+import paperNothing from "./assets/paper-nothing.jpg";
+
 
 function App() {
   const [tasks, setTasks] = useTasks();

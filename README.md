@@ -1,32 +1,118 @@
-# React + TypeScript + Vite
+# 📝 To-Dolist
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+To-Dolist is a modern, minimal to-do list web application with a hand-drawn paper look, designed to help users quickly write down their tasks, mark them as done, and keep them saved in the browser.
 
-Currently, two official plugins are available:
+## 📌 About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+To-Dolist provides a clean and simple user interface focused on a smooth experience. Tasks are written on a sheet of paper over a blurred background, and the list is saved automatically so it is still there the next time you open the app.
 
-## React Compiler
+**🔗 Live Demo:** https://firassadek.github.io/Todo-List/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the Oxlint configuration
+* ➕ Add tasks quickly (Enter key or Add button)
+* ✅ Mark tasks as done with a strikethrough
+* 🗑️ Delete tasks with one click
+* 💾 Automatic saving using `localStorage`
+* 🖼️ Paper image changes when the list is empty or has tasks
+* 📜 Scrollable list for long task lists
+* 📱 Fully responsive design
+* 🚀 Automatic deployment to GitHub Pages
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠️ Technologies Used
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+* React 19
+* TypeScript
+* Vite
+* Tailwind CSS 4
+* Oxlint
+* GitHub Actions & GitHub Pages
+* Google Fonts – Patrick Hand
+
+## 📂 Project Structure
+
+```
+todo-list/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+│
+├── src/
+│   ├── assets/
+│   │   ├── background.jpg
+│   │   ├── paper-nothing.jpg
+│   │   └── paper-tasks.jpg
+│   │
+│   ├── hooks/
+│   │   └── useTasks.ts
+│   │
+│   ├── types/
+│   │   └── Task.ts
+│   │
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+│
+├── index.html
+├── vite.config.ts
+├── tsconfig.json
+└── package.json
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 📱 App Sections
+
+### 🏠 Paper Sheet
+The main area of the app. Tasks are displayed on a sheet of paper, slightly rotated to match the paper image. The image changes depending on whether there are tasks or not.
+
+### ➕ Add Task Bar
+An input field and an Add button at the bottom of the page. Press Enter or click Add to add a new task.
+
+### ✅ Task Actions
+Click on a task to mark it as completed (or undo it). Use the × button next to a task to delete it.
+
+### 💾 Saved Data
+All tasks are stored in the browser's `localStorage`, so they are restored automatically when the page is reloaded.
+
+## 📱 Responsive Design
+
+The website is responsive and optimized for:
+
+* 💻 Desktop
+* 📱 Mobile
+* 📟 Tablet
+
+The paper and text scale with the screen size using CSS container query units.
+
+## 🚀 How to Run
+
+Install the dependencies and start the development server:
+
+```
+npm install
+npm run dev
+```
+
+Then open the link shown in the terminal in your browser.
+
+## 🔗 External Libraries
+
+* React 19
+* Tailwind CSS 4
+* Vite 8
+* Google Fonts – Patrick Hand
+
+## 👨‍💻 Developer
+
+Firas Sadek
+
+* 📧 Email: `firassadek666@gmail.com`
+* 📍 Syria
+
+## 📄 License
+
+This project was developed for educational and development purposes.

@@ -6,21 +6,33 @@ body {
   color: #2a2a2a;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20px;
+  z-index: -1;
+  background-image: url("./assets/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+}
 
 .stage {
   position: relative;
   width: min(94vw, 640px);
   aspect-ratio: 1;
-  background: center / 100% 100% no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   container-type: inline-size;
 }
-
 
 .sheet {
   position: absolute;
   left: 27%;
   top: 39.6%;
-  width: 47%; 
+  width: 47%;
   height: 42%;
   transform: rotate(-15deg);
   transform-origin: top left;
@@ -32,14 +44,15 @@ body {
   padding: 0 0.4em 0 0;
 }
 
-
 .sheet::-webkit-scrollbar {
   width: 0.5em;
 }
+
 .sheet::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 1em;
 }
+
 .sheet::-webkit-scrollbar-thumb {
   background: #2a2a2a;
   border-radius: 1em;
@@ -58,21 +71,25 @@ body {
   gap: 0.4em;
   padding: 0.12em 0;
 }
+
 .sheet li span {
   flex: 1;
   cursor: pointer;
   word-break: break-word;
 }
+
 .sheet li.done span {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
 .sheet li button {
   color: #a33;
   cursor: pointer;
   padding: 0 0.2em;
   line-height: 1;
 }
+
 .sheet li button:hover {
   background: #e8767a;
   color: #2a2a2a;
